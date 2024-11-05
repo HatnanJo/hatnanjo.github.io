@@ -25,7 +25,8 @@ const addLoadedClass = () => {
 // List of images to preload
 const imageUrls = [
     'Images/Autosave011.jpg',
-    // Add other images you want to preload here
+    'Images/Autosave004.jpg',
+    'Images/Autosave004_02.jpg',
 ];
 
 // Preload images and add loaded class when done
