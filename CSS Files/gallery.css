@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #161616;
+    overflow-x: hidden;
+    background-color: #f4f4f4; /* Custom background color */
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    color: #111;
+}
+
+/* Sidebar Styling */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #363131;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#sidebar.active {
+    transform: translateX(0);
+}
+
+#sidebar a {
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+#sidebar a:hover {
+    background-color: #111;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s;
+}
+
+.main-content.sidebar-open {
+    margin-left: 250px;
+}
+
+/* Gallery Page Styling */
+.gallery {
+    text-align: center;
+    padding: 2rem;
+}
+
+.gallery h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.gallery p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.gallery-grid figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.gallery-grid figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Lightbox overlay styling */
+#lightbox-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+#lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .gallery h1 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+
+    .gallery p {
+        font-size: 1rem; /* Smaller paragraph text on mobile */
+    }
+
+    .gallery-grid {
+        padding: 0; /* Remove side padding on mobile */
+    }
+
+    #sidebar {
+        width: 200px; /* Sidebar width on mobile */
+    }
+
+    .main-content.sidebar-open {
+        margin-left: 200px; /* Main content margin on mobile */
+    }
+}

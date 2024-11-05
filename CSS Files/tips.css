@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #161616;
+    overflow-x: hidden;
+    background-color: #f4f4f4; /* Custom background color */
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    color: #111;
+}
+
+/* Sidebar Styling */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #363131;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#sidebar.active {
+    transform: translateX(0);
+}
+
+#sidebar a {
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+#sidebar a:hover {
+    background-color: #111;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s;
+}
+
+.main-content.sidebar-open {
+    margin-left: 250px;
+}
+
+/* Tips Section Styling */
+.tips {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px; /* Centered max width */
+    background-color: #fff; /* White background for the tips section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.tips h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50; /* Darker text for headings */
+}
+
+.tip {
+    margin-bottom: 1.5rem; /* Space between tips */
+    padding: 1rem;
+    border-left: 5px solid #3498db; /* Accent line for style */
+    transition: transform 0.3s;
+}
+
+.tip:hover {
+    transform: translateY(-3px); /* Subtle lift effect on hover */
+}
+
+.tip h3 {
+    font-size: 1.8rem; /* Slightly smaller font for tip titles */
+    margin-bottom: 0.5rem;
+    color: #2980b9; /* Blue color for headings */
+}
+
+.tip p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333; /* Dark gray for body text */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tips {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .tips h2 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+
+    .tip h3 {
+        font-size: 1.5rem; /* Smaller titles on mobile */
+    }
+
+    #sidebar {
+        width: 200px; /* Sidebar width on mobile */
+    }
+
+    .main-content.sidebar-open {
+        margin-left: 200px; /* Main content margin on mobile */
+    }
+}
