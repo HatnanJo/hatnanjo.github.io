@@ -6,8 +6,14 @@ const preloadImages = (imageUrls) => {
         return new Promise((resolve, reject) => {
             const img = new Image();
             img.src = url;
-            img.onload = () => resolve(url);
-            img.onerror = () => reject(url);
+            img.onload = () => {
+                console.log(`Successfully preloaded: ${url}`); // Log on success
+                resolve(url);
+            };
+            img.onerror = () => {
+                console.error(`Failed to preload image: ${url}`); // Log on error
+                reject(url);
+            };
         });
     });
 
