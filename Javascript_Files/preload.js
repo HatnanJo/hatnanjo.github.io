@@ -6,8 +6,14 @@ const preloadImages = (imageUrls) => {
         return new Promise((resolve, reject) => {
             const img = new Image();
             img.src = url;
-            img.onload = () => resolve(url);
-            img.onerror = () => reject(url);
+            img.onload = () => {
+                console.log(`Successfully preloaded: ${url}`); // Log on success
+                resolve(url);
+            };
+            img.onerror = () => {
+                console.error(`Failed to preload image: ${url}`); // Log on error
+                reject(url);
+            };
         });
     });
 
@@ -24,8 +30,9 @@ const addLoadedClass = () => {
 
 // List of images to preload
 const imageUrls = [
-    '/Images/Autosave011.jpg',
-    // Add other images you want to preload here
+    'Images/Autosave011.jpg',
+    'Images/Autosave004.jpg',
+    'Images/Autosave004_02.jpg',
 ];
 
 // Preload images and add loaded class when done
