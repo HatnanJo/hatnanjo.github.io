@@ -7,7 +7,7 @@
 
 /* Hero Image Styling */
 .hero-image {
-    background: url('/Images/Autosave011.jpg') center center/cover no-repeat; /* Full background */
+    background: url('Images/Autosave011.jpg') center center/cover no-repeat; /* Full background */
     position: fixed; /* Change to fixed to ensure it covers the viewport */
     top: 0; /* Align to top of the viewport */
     left: 0; /* Align to left of the viewport */
