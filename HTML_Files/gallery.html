@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | Astrophotography Portfolio</title>
-  <link rel="stylesheet" href="CSS_Files/gallery.css">
-  <script src="Javascript_Files/preload.js"></script>
+  <link rel="stylesheet" href="/CSS_Files/gallery.css">
+  <script src="/Javascript_Files/preload.js"></script>
 </head>
 <body>
   <!-- Hamburger Menu Icon -->
-  <div class="menu-icon" id="menuIcon" aria-label="Toggle navigation" onclick="toggleMenu()">&#9776;</div>
+  <div class="menu-icon" id="menuIcon" aria-label="Toggle navigation" aria-expanded="false">&#9776;</div>
   
   <!-- Sidebar Navigation -->
   <nav id="sidebar">
-    <a href="index.html">Home</a>
-    <a href="HTML_Files/gallery.html">Gallery</a>
-    <a href="HTML_Files/donate.html">Donate</a>
+    <a href="/index.html">Home</a>
+    <a href="/HTML_Files/gallery.html">Gallery</a>
+    <a href="/HTML_Files/donate.html">Donate</a>
   </nav>
 
   <!-- Main Content for the Gallery -->
@@ -27,19 +27,19 @@
       <!-- Image Grid -->
       <div class="gallery-grid">
         <figure>
-          <img src="Images/Autosave004.jpg" alt="Description of Photo 1" onclick="openLightbox('Images/Autosave004.jpg')">
+          <img src="/Images/Autosave004.jpg" alt="Description of Photo 1" onclick="openLightbox('/Images/Autosave004.jpg')" loading="lazy">
           <figcaption>Milky Way</figcaption>
         </figure>
         <figure>
-          <img src="images/photo2.jpg" alt="Description of Photo 2" onclick="openLightbox('images/photo2.jpg')">
+          <img src="/images/photo2.jpg" alt="Description of Photo 2" onclick="openLightbox('/images/photo2.jpg')" loading="lazy">
           <figcaption>Orion Nebula</figcaption>
         </figure>
         <figure>
-          <img src="images/photo3.jpg" alt="Description of Photo 3" onclick="openLightbox('images/photo3.jpg')">
+          <img src="/images/photo3.jpg" alt="Description of Photo 3" onclick="openLightbox('/images/photo3.jpg')" loading="lazy">
           <figcaption>Star Trails</figcaption>
         </figure>
         <figure>
-          <img src="images/photo4.jpg" alt="Description of Photo 4" onclick="openLightbox('images/photo4.jpg')">
+          <img src="/images/photo4.jpg" alt="Description of Photo 4" onclick="openLightbox('/images/photo4.jpg')" loading="lazy">
           <figcaption>Galactic Center</figcaption>
         </figure>
       </div>
@@ -47,12 +47,16 @@
   </div>
 
   <!-- Lightbox Overlay HTML (initially hidden) -->
-  <div id="lightbox-overlay" onclick="closeLightbox()">
+  <div id="lightbox-overlay" onclick="closeLightbox()" style="display: none;">
     <img id="lightbox-image" src="" alt="Enlarged Image">
   </div>
 
   <!-- Link to External JavaScript Files -->
-  <script src="Javascript_Files/Sidebar.js"></script>
-  <script src="Javascript_Files/gallery-lightbox.js"></script> <!-- Lightbox script -->
+  <script src="/Javascript_Files/Sidebar.js"></script>
+  <script src="/Javascript_Files/gallery-lightbox.js"></script> <!-- Lightbox script -->
+  <script>
+    // JavaScript for handling menu icon click
+    document.getElementById("menuIcon").addEventListener("click", toggleMenu);
+  </script>
 </body>
 </html>
