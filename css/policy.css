@@ -3,160 +3,173 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Body Styling */
-  body {
+}
+
+/* Body Styling */
+body {
     font-family: 'Arial', sans-serif;
     color: #333;
-    background-color: #f0f2f5;
+    background-color: #f4f6f9;
     line-height: 1.6;
-    margin: 0;
     padding: 0;
-  }
-  
-  /* Main Content Wrapper */
-  .policy-container {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 2rem;
-    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Content Wrapper */
+.policy-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 3rem;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border: 1px solid #ddd;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e5eb;
     overflow: hidden;
-  }
-  
-  /* Header and Title Styling */
-  .policy-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #444;
+}
+
+/* Header and Title Styling */
+.policy-container h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+    color: #333;
     text-align: center;
     position: relative;
-  }
-  
-  .policy-container h1::after {
+}
+
+.policy-container h1::after {
     content: '';
     display: block;
-    width: 60px;
+    width: 80px;
     height: 4px;
     background-color: #0066cc;
     margin: 1rem auto 0;
     border-radius: 4px;
-  }
-  
-  .policy-container h2 {
+}
+
+/* Section Header Styling */
+.policy-container h2 {
+    font-size: 2rem;
+    color: #444;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.policy-container h3 {
     font-size: 1.75rem;
     color: #555;
     margin-top: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .policy-container h3 {
-    font-size: 1.5rem;
-    color: #666;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Paragraph and List Styling */
-  .policy-container p {
-    margin: 1rem 0;
+    margin-bottom: 0.75rem;
+}
+
+/* Paragraph and List Styling */
+.policy-container p {
+    margin: 1.5rem 0;
     color: #333;
     text-align: justify;
     line-height: 1.8;
-  }
-  
-  .policy-container ul {
+}
+
+.policy-container ul {
     list-style-type: disc;
     padding-left: 2rem;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     color: #444;
-  }
-  
-  .policy-container ul li {
-    margin: 0.5rem 0;
-  }
-  
-  /* Link Styling */
-  .policy-container a {
+}
+
+.policy-container ul li {
+    margin: 0.75rem 0;
+}
+
+/* Link Styling */
+.policy-container a {
     color: #0066cc;
     text-decoration: none;
     font-weight: bold;
-  }
-  
-  .policy-container a:hover {
+}
+
+.policy-container a:hover {
     text-decoration: underline;
     color: #004a99;
-  }
-  
-  /* Table Styling */
-  .policy-container table {
+}
+
+/* Table Styling */
+.policy-container table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1.5rem;
-  }
-  
-  .policy-container th,
-  .policy-container td {
+    margin-top: 2rem;
+}
+
+.policy-container th,
+.policy-container td {
     border: 1px solid #ddd;
-    padding: 12px;
+    padding: 15px;
     text-align: left;
-    font-size: 0.95rem;
-  }
-  
-  .policy-container th {
-    background-color: #f4f4f4;
+    font-size: 1rem;
+}
+
+.policy-container th {
+    background-color: #f8f9fa;
     color: #333;
     font-weight: bold;
-  }
-  
-  /* Blockquote Styling */
-  .policy-container blockquote {
-    border-left: 4px solid #0066cc;
-    margin: 1.5rem 0;
-    padding: 1rem;
+}
+
+.policy-container td {
     background-color: #f9f9f9;
+}
+
+/* Blockquote Styling */
+.policy-container blockquote {
+    border-left: 4px solid #0066cc;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
     color: #555;
     font-style: italic;
-  }
-  
-  /* Button Styling */
-  .policy-container .accept-button {
+}
+
+/* Button Styling */
+.policy-container .accept-button {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    margin-top: 2rem;
+    padding: 1rem 2rem;
+    margin-top: 2.5rem;
     background-color: #0066cc;
     color: #fff;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .policy-container .accept-button:hover {
+    text-align: center;
+    width: auto;
+}
+
+.policy-container .accept-button:hover {
     background-color: #004a99;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 2rem;
+    }
+
     .policy-container {
-      padding: 1rem;
+        padding: 2rem;
     }
-  
+
     .policy-container h1 {
-      font-size: 2rem;
+        font-size: 2.25rem;
     }
-  
+
     .policy-container h2 {
-      font-size: 1.5rem;
+        font-size: 1.75rem;
     }
-  
+
     .policy-container h3 {
-      font-size: 1.25rem;
+        font-size: 1.5rem;
     }
-  }
-  
+}
