@@ -134,7 +134,7 @@ body {
   width: 48%; /* Make the images take up about half the container width */
   max-width: 600px; /* Set a max-width to control size */
   height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: Add rounded corners for styling */
+  border-radius: 0px; /* Optional: Add rounded corners for styling */
 }
 
 /* Image alignment */
