@@ -124,34 +124,26 @@ body {
 .image-container {
   display: flex;
   justify-content: center; /* Align images in the center */
-  position: relative; /* For positioning the image within */
 }
 
 .image-container img {
-  width: 80%; /* Adjust the image width for more spacing from edges */
-  max-width: 1000px; /* Set a max-width to control size */
+  width: 100%; /* Make the images responsive */
+  max-width: 1000px; /* Set a max-width to control size similar to the hero image */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Optional: Add rounded corners for styling */
 }
 
-/* Position images alternately with more central alignment */
+/* Image alignment */
 .image-container.left img {
-  position: absolute;
-  left: 20%; /* Move the image slightly towards the left */
+  align-self: flex-start; /* Align to the left */
+}
+
+.image-container.center img {
+  align-self: center; /* Align to the center */
 }
 
 .image-container.right img {
-  position: absolute;
-  right: 20%; /* Move the image slightly towards the right */
-}
-
-/* Add some spacing between left and right image containers */
-.image-container:nth-child(odd) {
-  align-items: flex-start; /* Align odd images to the left */
-}
-
-.image-container:nth-child(even) {
-  align-items: flex-end; /* Align even images to the right */
+  align-self: flex-end; /* Align to the right */
 }
 
 /* Responsive Adjustments */
@@ -176,11 +168,6 @@ body {
 
   .image-container img {
     max-width: 90%; /* Make images smaller on small screens */
-  }
-
-  /* Ensure images align to the center on mobile */
-  .image-container.left img, .image-container.right img {
-    position: static;
   }
 }
 
