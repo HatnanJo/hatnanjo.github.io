@@ -36,6 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
   } else {
       console.error("Element with ID 'sidebar' not found.");
   }
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("menuIcon").addEventListener("click", toggleSidebar);
 });
-
-document.getElementById("menuIcon").addEventListener("click", toggleSidebar);
