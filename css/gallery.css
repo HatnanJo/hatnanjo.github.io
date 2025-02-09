@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+/* CSS Custom Properties */
+:root {
+    --sidebar-width: 250px;
+    --sidebar-width-mobile: 200px;
+}
+
 /* Body Styling */
 body {
     font-family: Arial, sans-serif;
@@ -29,15 +35,16 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
+    width: var(--sidebar-width);
     height: 100%;
-    background-color: #363131;
+    background-color: #262626; /* Darker background for better contrast */
     color: #fff;
     display: flex;
     flex-direction: column;
     padding-top: 3rem;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
+    will-change: transform;
 }
 
 #sidebar.active {
@@ -63,7 +70,7 @@ body {
 }
 
 .main-content.sidebar-open {
-    margin-left: 250px;
+    margin-left: var(--sidebar-width);
 }
 
 /* Gallery Page Styling */
@@ -102,14 +109,16 @@ body {
     height: auto;
     display: block;
     cursor: pointer;
+    aspect-ratio: 16 / 9; /* Example aspect ratio */
+    object-fit: cover;
 }
 
 .gallery-grid figcaption {
     position: absolute;
-    bottom: 0;
+    inset-block-end: 0;
+    inline-size: 100%;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
-    width: 100%;
     padding: 0.5rem;
     text-align: center;
     font-size: 1rem;
@@ -153,10 +162,23 @@ body {
     }
 
     #sidebar {
-        width: 200px; /* Sidebar width on mobile */
+        width: var(--sidebar-width-mobile); /* Sidebar width on mobile */
     }
 
     .main-content.sidebar-open {
-        margin-left: 200px; /* Main content margin on mobile */
+        margin-left: var(--sidebar-width-mobile); /* Main content margin on mobile */
     }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #eee;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
