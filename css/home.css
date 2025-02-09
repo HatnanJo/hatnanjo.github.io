@@ -1,10 +1,10 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Body Styling */
 body {
   font-family: Arial, sans-serif;
@@ -13,167 +13,206 @@ body {
   background-color: #f4f4f4; /* Custom background color */
 }
 
-  
-  /* Hamburger Menu Icon */
-  .menu-icon {
-    font-size: 2rem;
-    cursor: pointer;
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 1000;
-    color: #fff;
-  }
-  
-  /* Sidebar Styling */
-  #sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #363131;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    padding-top: 3rem;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  #sidebar.active {
-    transform: translateX(0);
-  }
-  
-  #sidebar a {
-    color: #fff;
-    padding: 1rem;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: background 0.3s;
-  }
-  
-  #sidebar a:hover {
-    background-color: #111;
-  }
-  
-  /* Main Content Styling */
-  .main-content {
-    margin-left: 0;
-    transition: margin-left 0.3s;
-  }
-  
-  .main-content.sidebar-open {
-    margin-left: 250px;
-  }
-  
+/* Hamburger Menu Icon */
+.menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  color: #fff;
+}
 
+/* Sidebar Styling */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #363131;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
 
-  /* Hero Image Styling */
-  .hero-image {
-background: url('/Astrophotography-Gallery/Images/DSC00859.jpg') center/cover no-repeat;
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .hero-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
+#sidebar.active {
+  transform: translateX(0);
+}
+
+#sidebar a {
+  color: #fff;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+#sidebar a:hover {
+  background-color: #111;
+}
+
+/* Main Content Styling */
+.main-content {
+  margin-left: 0;
+  transition: margin-left 0.3s;
+}
+
+.main-content.sidebar-open {
+  margin-left: 250px;
+}
+
+/* Hero Image Styling */
+.hero-image {
+  background: url('/Astrophotography-Gallery/Images/DSC00859.jpg') center/cover no-repeat;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-image h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* About Section Styling */
+#about {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Gallery Section */
+#image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between images */
+  margin-top: 30px; /* Add some space between hero and gallery */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Align images in the center */
+}
+
+.image-container img {
+  width: 100%; /* Make the images responsive */
+  max-width: 1000px; /* Set a max-width to control size similar to the hero image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners for styling */
+}
+
+/* Image alignment */
+.image-container.left img {
+  align-self: flex-start; /* Align to the left */
+}
+
+.image-container.center img {
+  align-self: center; /* Align to the center */
+}
+
+.image-container.right img {
+  align-self: flex-end; /* Align to the right */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .hero-image h1 {
-    position: relative;
-    z-index: 1;
-    font-size: 3rem;
-    margin: 0;
+    font-size: 2.5rem;
   }
-  
-  /* About Section Styling */
-  #about {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-  }
-  
-  #about h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  #about p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .hero-image h1 {
-      font-size: 2.5rem;
-    }
-  
-    #sidebar {
-      width: 200px;
-    }
-  
-    .main-content.sidebar-open {
-      margin-left: 200px;
-    }
-  }
-  
 
-  footer {
-    background-color: #333; /* Dark background for contrast */
-    color: #fff;
-    padding: 1.5rem 0;
-    text-align: center;
-    font-size: 0.9rem;
+  #sidebar {
+    width: 200px;
   }
-  
-  .footer-content {
-    display: flex;
+
+  .main-content.sidebar-open {
+    margin-left: 200px;
+  }
+
+  /* Adjust gallery layout for small screens */
+  #image-gallery {
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .footer-links a {
-    color: #a9a9a9; /* Slightly lighter gray for links */
-    text-decoration: none;
-    margin: 0 0.5rem;
-  }
-  
-  .footer-links a:hover {
-    color: #fff;
-  }
-  
-  .footer-social a {
-    color: #a9a9a9;
-    text-decoration: none;
-    margin: 0 0.3rem;
-  }
-  
-  .footer-social a:hover {
-    color: #fff;
-  }
-  
-  .footer-copyright p {
-    margin: 0;
-    font-size: 0.8rem;
-    color: #bbb;
+    gap: 15px;
   }
 
- /* Cookie banner full-screen overlay */
+  .image-container img {
+    max-width: 90%; /* Make images smaller on small screens */
+  }
+}
+
+footer {
+  background-color: #333; /* Dark background for contrast */
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #a9a9a9; /* Slightly lighter gray for links */
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-social a {
+  color: #a9a9a9;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+
+.footer-social a:hover {
+  color: #fff;
+}
+
+.footer-copyright p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+/* Cookie banner full-screen overlay */
 .cookie-banner {
   position: fixed;
   top: 0;
